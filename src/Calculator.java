@@ -1,15 +1,43 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Calculator {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner input = new Scanner(System.in);
+while (true){
+    System.out.println("Enter the Operator: ");
+    char op = input.next().trim().charAt(0);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    if ( op =='+' || op =='-' || op =='*' ||  op =='/' ||  op =='%' )
+            {
+                System.out.println("Enter a numbers: ");
+                int a = input.nextInt();
+                int b = input.nextInt();
+                if (op=='+'){
+                    System.out.println(a+b);
+                }
+                if (op=='-'){
+                    System.out.println(a-b);
+                }
+                if (op=='*'){
+                    System.out.println(a*b);
+                }
+                if (op=='/'){
+                    if (b==0){
+                        System.out.println("Division by zero is gives you infinite number");
+                    } else {
+                        System.out.println((double)a/b);
+                    }
+                }
+                if (op=='%'){
+                    System.out.println(a%b);
+                }
+                }else if (op=='x' || op=='X')  {
+        break;
+                }else {
+        System.out.println("Invalid operation!!");
+            }
         }
+
+
     }
 }
