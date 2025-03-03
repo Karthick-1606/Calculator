@@ -4,7 +4,8 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 while (true){
-    System.out.println("Enter the Operator: ");
+    System.out.println("Enter any of the following Operator "+",
+                    "-","*", "/","%" : ");
     char op = input.next().trim().charAt(0);
 
     if ( op =='+' || op =='-' || op =='*' ||  op =='/' ||  op =='%' )
